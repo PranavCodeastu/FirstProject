@@ -37,7 +37,7 @@ jobs:
       uses: mrikirill/RN-AppCenter-CodePush@v1.0.0
       env:
         APPCENTER_TOKEN: ${{ secrets.APPCENTER_ACCESS_TOKEN }}
-        APP_IOS: AppIOS
+        APP_IOS: ReactFirst
         OTA_CHANNEL_IOS: Staging
-        APP_ANDROID: AppAndroid
+        APP_ANDROID: ReactFirst
         OTA_CHANNEL_ANDROID: Staging
