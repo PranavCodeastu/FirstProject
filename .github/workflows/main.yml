@@ -36,7 +36,6 @@ jobs:
     - name: Build OTA update
       uses: mrikirill/RN-AppCenter-CodePush@v1.0.0
       env:
-        ENV_FILENAME: .env.template
         APPCENTER_TOKEN: ${{ secrets.APPCENTER_ACCESS_TOKEN }}
         APP_IOS: AppIOS
         OTA_CHANNEL_IOS: Staging
