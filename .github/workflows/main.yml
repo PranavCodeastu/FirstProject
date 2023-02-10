@@ -31,14 +31,9 @@ jobs:
     needs: install-and-test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Install npm dependencies
-      run: npm i
-    - name: Build OTA update
-      uses: mrikirill/RN-AppCenter-CodePush@v1.0.0
-      env:
-        APPCENTER_TOKEN: ${{ secrets.APPCENTER_ACCESS_TOKEN }}
-        APP_IOS: ReactFirst
-        OTA_CHANNEL_IOS: Staging
-        APP_ANDROID: ReactFirst
-        OTA_CHANNEL_ANDROID: Staging
+      - name: Deploy to Codepush
+        uses: TripleSpeeder/codepush-action@master
+        with:
+          args: release-react -d Staging
+        env:
+          APPCENTER_ACCESS_TOKEN: ${{ secrets.APPCENTER_ACCESS_TOKEN }}
