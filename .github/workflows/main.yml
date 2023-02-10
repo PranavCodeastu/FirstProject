@@ -32,11 +32,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@development
+        uses: actions/checkout@master
       - name: Install Dependencies
         run: npm install
       - name: Deploy to Codepush
-        uses: TripleSpeeder/codepush-action@development
+        uses: TripleSpeeder/codepush-action@master
         with:
           args: release-react -d Staging
         env:
