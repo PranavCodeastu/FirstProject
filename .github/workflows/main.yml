@@ -28,6 +28,7 @@ jobs:
           name: app-debug.apk
           path: android/app/build/outputs/apk/debug/
   Deploy:
+    needs: install-and-test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
